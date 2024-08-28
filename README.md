@@ -1,6 +1,6 @@
-# RUCB_Project-3_
+# RUCB_Project-3_ArcadeDex
 Project 3 | Group 3 - Rutgers University Coding Bootcamp (06/2024)
-### "Like LinkTree, but for eSports"
+### "ArcadeDex: Like LinkTree, but for eSports"
 
 ## MVP
 ### PUBLIC PAGES
