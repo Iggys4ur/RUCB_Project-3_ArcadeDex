@@ -1,0 +1,10 @@
+{
+    "title": "Game Model",
+    "description": "Stores information about different games that users can link or display.",
+    "fields": {
+        "name": "String",
+        "platform": "String (e.g., PC, Xbox, PlayStation)",
+        "genre": "String",
+        "releaseDate": "Date"
+    }
+}

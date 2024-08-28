@@ -1,0 +1,18 @@
+// User Registration Flow Chart
+digraph {
+	step0 [label="User navigates to the registration page" shape=box]
+	step1 [label="User fills out registration form" shape=box]
+	step0 -> step1
+	step2 [label="Form data is validated on the client side" shape=box]
+	step1 -> step2
+	step3 [label="Data is sent to the backend" shape=box]
+	step2 -> step3
+	step4 [label="Backend validates data and checks for existing user" shape=box]
+	step3 -> step4
+	step5 [label="User information is saved in the database" shape=box]
+	step4 -> step5
+	step6 [label="Success message is sent to the frontend" shape=box]
+	step5 -> step6
+	step7 [label="User is redirected to the login page" shape=box]
+	step6 -> step7
+}

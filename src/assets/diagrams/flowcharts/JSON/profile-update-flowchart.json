@@ -1,0 +1,12 @@
+{
+    "title": "Profile Update Flow Chart",
+    "description": "Describes how users can update their profile information and how those changes are saved.",
+    "steps": [
+        "User navigates to account settings page",
+        "User updates profile fields (username, email, etc.)",
+        "Update request is sent to the backend",
+        "Backend validates and updates the user profile in the database",
+        "Success message is returned to the frontend",
+        "User sees updated profile information"
+    ]
+}

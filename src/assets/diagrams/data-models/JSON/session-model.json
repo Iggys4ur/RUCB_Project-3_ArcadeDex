@@ -1,0 +1,10 @@
+{
+    "title": "Session Model",
+    "description": "Tracks user sessions for authentication and authorization.",
+    "fields": {
+        "userId": "ObjectId (reference to User model)",
+        "token": "String (JWT token)",
+        "createdAt": "Date",
+        "expiresAt": "Date"
+    }
+}

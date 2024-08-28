@@ -1,0 +1,10 @@
+{
+    "title": "Session History Model",
+    "description": "Logs user session history, which can be useful for analytics and security.",
+    "fields": {
+        "userId": "ObjectId (reference to User model)",
+        "loginTime": "Date",
+        "logoutTime": "Date",
+        "ipAddress": "String"
+    }
+}

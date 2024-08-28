@@ -1,0 +1,14 @@
+// Search Functionality Flow Chart
+digraph {
+	step0 [label="User enters a search query in the search bar" shape=box]
+	step1 [label="Frontend sends a search request to the backend" shape=box]
+	step0 -> step1
+	step2 [label="Backend processes the search query" shape=box]
+	step1 -> step2
+	step3 [label="Matching results are fetched from the database" shape=box]
+	step2 -> step3
+	step4 [label="Results are returned to the frontend" shape=box]
+	step3 -> step4
+	step5 [label="Search results are displayed to the user" shape=box]
+	step4 -> step5
+}

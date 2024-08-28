@@ -1,0 +1,22 @@
+{
+    "title": "Search Results Page Wireframe",
+    "description": "Displays search results when users search for other gamers or specific games.",
+    "components": [
+        {
+            "name": "Header",
+            "description": "Includes logo, search bar, and site navigation links."
+        },
+        {
+            "name": "Search Results List",
+            "description": "List of users or games matching the search criteria."
+        },
+        {
+            "name": "Pagination Controls",
+            "description": "Controls to navigate through multiple pages of search results."
+        },
+        {
+            "name": "Footer",
+            "description": "Contains links to other parts of the site."
+        }
+    ]
+}

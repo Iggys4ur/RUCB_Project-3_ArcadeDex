@@ -1,0 +1,4 @@
+// Friend Model
+digraph {
+	"Friend Model" [label="{ Friend Model | userId | friendId | status | createdAt }" shape=record]
+}

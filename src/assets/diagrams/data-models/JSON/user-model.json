@@ -1,0 +1,11 @@
+{
+    "title": "User Model",
+    "description": "Defines the schema for user accounts, including authentication details and linked accounts.",
+    "fields": {
+        "username": "String",
+        "email": "String",
+        "password": "String (hashed)",
+        "gamerTags": "Array of Strings",
+        "linkedAccounts": "Object with keys for each platform (e.g., Steam)"
+    }
+}

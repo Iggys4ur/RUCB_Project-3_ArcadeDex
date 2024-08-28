@@ -1,0 +1,4 @@
+// Achievement Model
+digraph {
+	"Achievement Model" [label="{ Achievement Model | title | description | dateEarned | game }" shape=record]
+}

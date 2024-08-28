@@ -1,0 +1,26 @@
+{
+    "title": "Achievement Detail Page Wireframe",
+    "description": "Provides more detailed information about a specific achievement, including date earned and criteria met.",
+    "components": [
+        {
+            "name": "Header",
+            "description": "Includes logo and site navigation links."
+        },
+        {
+            "name": "Achievement Title",
+            "description": "Displays the name of the achievement."
+        },
+        {
+            "name": "Achievement Description",
+            "description": "Detailed description of what the achievement is and how it was earned."
+        },
+        {
+            "name": "Date Earned",
+            "description": "The date the achievement was unlocked."
+        },
+        {
+            "name": "Footer",
+            "description": "Links to the user's profile and other achievements."
+        }
+    ]
+}

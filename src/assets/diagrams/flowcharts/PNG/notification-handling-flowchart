@@ -1,0 +1,16 @@
+// Notification Handling Flow Chart
+digraph {
+	step0 [label="User performs an action (e.g., sends a friend request)" shape=box]
+	step1 [label="Notification is created in the backend" shape=box]
+	step0 -> step1
+	step2 [label="Notification is saved in the database" shape=box]
+	step1 -> step2
+	step3 [label="User navigates to the notification center" shape=box]
+	step2 -> step3
+	step4 [label="Frontend requests notifications from the backend" shape=box]
+	step3 -> step4
+	step5 [label="Notifications are fetched and displayed" shape=box]
+	step4 -> step5
+	step6 [label="User interacts with notifications (e.g., marks as read, deletes)" shape=box]
+	step5 -> step6
+}

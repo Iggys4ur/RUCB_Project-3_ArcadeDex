@@ -1,0 +1,13 @@
+{
+    "title": "Friend Request Flow Chart",
+    "description": "Details the process of sending, receiving, and accepting friend requests.",
+    "steps": [
+        "User searches for another user",
+        "User sends a friend request",
+        "Request is saved in the database with status 'pending'",
+        "Recipient sees the friend request in their notifications",
+        "Recipient accepts or declines the request",
+        "If accepted, the friend status is updated to 'accepted'",
+        "Both users see each other in their friends list"
+    ]
+}

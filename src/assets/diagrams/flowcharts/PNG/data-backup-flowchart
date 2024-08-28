@@ -1,0 +1,12 @@
+// Data Backup Flow Chart
+digraph {
+	step0 [label="Scheduled backup task is triggered" shape=box]
+	step1 [label="Backend retrieves data from the database" shape=box]
+	step0 -> step1
+	step2 [label="Data is compressed and saved to backup storage" shape=box]
+	step1 -> step2
+	step3 [label="Backup completion is logged" shape=box]
+	step2 -> step3
+	step4 [label="Notification is sent to the administrator about backup status" shape=box]
+	step3 -> step4
+}

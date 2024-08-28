@@ -1,0 +1,26 @@
+{
+    "title": "Public User Profile Wireframe",
+    "description": "Displays the user's Steam accolades and gaming achievements in a public profile format.",
+    "components": [
+        {
+            "name": "Header",
+            "description": "Includes logo, navigation links, and search bar."
+        },
+        {
+            "name": "Profile Picture",
+            "description": "Displays the user's avatar or profile picture."
+        },
+        {
+            "name": "User Details",
+            "description": "Displays the user's name, gamer tags, and linked accounts."
+        },
+        {
+            "name": "Achievement Section",
+            "description": "Displays the user's gaming accolades and achievements."
+        },
+        {
+            "name": "Footer",
+            "description": "Contains links to privacy policy, terms of service, and contact information."
+        }
+    ]
+}

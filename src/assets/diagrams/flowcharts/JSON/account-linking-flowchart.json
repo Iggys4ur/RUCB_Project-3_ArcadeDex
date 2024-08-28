@@ -1,0 +1,12 @@
+{
+    "title": "Account Linking Flow Chart",
+    "description": "Shows the steps involved in linking or unlinking a gaming platform to the user's ArcadeDex account.",
+    "steps": [
+        "User navigates to the system/platform settings page",
+        "User selects a platform to link",
+        "User enters required credentials or authorizes the connection",
+        "Request is sent to the gaming platform API",
+        "API response is validated and saved in the user's profile",
+        "User sees linked account information on their profile"
+    ]
+}

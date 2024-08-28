@@ -1,0 +1,16 @@
+// Login Authentication Flow Chart
+digraph {
+	step0 [label="User navigates to the login page" shape=box]
+	step1 [label="User enters email and password" shape=box]
+	step0 -> step1
+	step2 [label="Login request is sent to the backend" shape=box]
+	step1 -> step2
+	step3 [label="Backend checks email and password against database" shape=box]
+	step2 -> step3
+	step4 [label="If valid, JWT token is generated and sent to the user" shape=box]
+	step3 -> step4
+	step5 [label="User is redirected to their profile or dashboard" shape=box]
+	step4 -> step5
+	step6 [label="Token is stored in local storage for session management" shape=box]
+	step5 -> step6
+}

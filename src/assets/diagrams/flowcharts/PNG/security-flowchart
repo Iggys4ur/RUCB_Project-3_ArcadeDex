@@ -1,0 +1,14 @@
+// Security Flow Chart
+digraph {
+	step0 [label="User performs an action (e.g., login, account change)" shape=box]
+	step1 [label="Action is intercepted by a security middleware" shape=box]
+	step0 -> step1
+	step2 [label="Security checks are performed (e.g., token validation, IP checks)" shape=box]
+	step1 -> step2
+	step3 [label="If action passes security checks, it is allowed to proceed" shape=box]
+	step2 -> step3
+	step4 [label="If action fails security checks, it is blocked and logged" shape=box]
+	step3 -> step4
+	step5 [label="User is notified of any security concerns (e.g., unauthorized access attempt)" shape=box]
+	step4 -> step5
+}

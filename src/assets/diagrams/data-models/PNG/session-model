@@ -1,0 +1,4 @@
+// Session Model
+digraph {
+	"Session Model" [label="{ Session Model | userId | token | createdAt | expiresAt }" shape=record]
+}

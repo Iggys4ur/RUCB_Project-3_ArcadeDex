@@ -1,0 +1,22 @@
+{
+    "title": "Error Page Wireframe",
+    "description": "A general error page that informs users when something goes wrong, like a 404 or 500 error.",
+    "components": [
+        {
+            "name": "Header",
+            "description": "Includes logo and site navigation links."
+        },
+        {
+            "name": "Error Message",
+            "description": "Displays a generic error message or specific error code."
+        },
+        {
+            "name": "Home Button",
+            "description": "Button to navigate back to the home page."
+        },
+        {
+            "name": "Footer",
+            "description": "Links to support and help pages."
+        }
+    ]
+}

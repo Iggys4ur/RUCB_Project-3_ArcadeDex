@@ -1,0 +1,4 @@
+// Notification Model
+digraph {
+	"Notification Model" [label="{ Notification Model | userId | message | type | read | createdAt }" shape=record]
+}

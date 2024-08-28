@@ -1,0 +1,10 @@
+{
+    "title": "Friend Model",
+    "description": "Manages friend connections and requests between users.",
+    "fields": {
+        "userId": "ObjectId (reference to User model)",
+        "friendId": "ObjectId (reference to User model)",
+        "status": "String (e.g., pending, accepted)",
+        "createdAt": "Date"
+    }
+}

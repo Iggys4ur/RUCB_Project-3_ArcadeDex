@@ -1,0 +1,22 @@
+{
+    "title": "Private User Account Settings Page Wireframe",
+    "description": "Allows users to update their username, email, password, and manage gamer tags.",
+    "components": [
+        {
+            "name": "Header",
+            "description": "Includes logo and site navigation links."
+        },
+        {
+            "name": "Account Details Form",
+            "description": "Fields for username, email, password, and gamer tags with update button."
+        },
+        {
+            "name": "Delete Account Button",
+            "description": "Option for users to delete their account."
+        },
+        {
+            "name": "Footer",
+            "description": "Contains links to help and support."
+        }
+    ]
+}

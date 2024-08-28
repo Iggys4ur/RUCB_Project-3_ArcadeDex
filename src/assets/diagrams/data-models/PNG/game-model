@@ -1,0 +1,4 @@
+// Game Model
+digraph {
+	"Game Model" [label="{ Game Model | name | platform | genre | releaseDate }" shape=record]
+}

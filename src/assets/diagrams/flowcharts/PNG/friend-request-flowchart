@@ -1,0 +1,16 @@
+// Friend Request Flow Chart
+digraph {
+	step0 [label="User searches for another user" shape=box]
+	step1 [label="User sends a friend request" shape=box]
+	step0 -> step1
+	step2 [label="Request is saved in the database with status 'pending'" shape=box]
+	step1 -> step2
+	step3 [label="Recipient sees the friend request in their notifications" shape=box]
+	step2 -> step3
+	step4 [label="Recipient accepts or declines the request" shape=box]
+	step3 -> step4
+	step5 [label="If accepted, the friend status is updated to 'accepted'" shape=box]
+	step4 -> step5
+	step6 [label="Both users see each other in their friends list" shape=box]
+	step5 -> step6
+}

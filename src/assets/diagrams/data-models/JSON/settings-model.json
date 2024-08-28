@@ -1,0 +1,10 @@
+{
+    "title": "Settings Model",
+    "description": "Manages user preferences and account settings.",
+    "fields": {
+        "userId": "ObjectId (reference to User model)",
+        "theme": "String (e.g., light, dark)",
+        "notificationsEnabled": "Boolean",
+        "language": "String (e.g., en, fr)"
+    }
+}

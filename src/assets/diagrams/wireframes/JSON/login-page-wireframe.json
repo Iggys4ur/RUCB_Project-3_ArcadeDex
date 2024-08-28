@@ -1,0 +1,22 @@
+{
+    "title": "Login Page Wireframe",
+    "description": "Provides a simple and user-friendly interface for users to log in to ArcadeDex.",
+    "components": [
+        {
+            "name": "Header",
+            "description": "Includes logo and site navigation links."
+        },
+        {
+            "name": "Login Form",
+            "description": "Contains fields for email and password, and a submit button."
+        },
+        {
+            "name": "Forgot Password Link",
+            "description": "Link to navigate to the forgot password page."
+        },
+        {
+            "name": "Footer",
+            "description": "Links to sign up page and terms of service."
+        }
+    ]
+}

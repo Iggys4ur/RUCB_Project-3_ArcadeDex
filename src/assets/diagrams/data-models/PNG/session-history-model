@@ -1,0 +1,4 @@
+// Session History Model
+digraph {
+	"Session History Model" [label="{ Session History Model | userId | loginTime | logoutTime | ipAddress }" shape=record]
+}

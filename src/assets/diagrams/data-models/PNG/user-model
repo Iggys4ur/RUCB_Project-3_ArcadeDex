@@ -1,0 +1,4 @@
+// User Model
+digraph {
+	"User Model" [label="{ User Model | username | email | password | gamerTags | linkedAccounts }" shape=record]
+}

@@ -1,0 +1,4 @@
+// Settings Model
+digraph {
+	"Settings Model" [label="{ Settings Model | userId | theme | notificationsEnabled | language }" shape=record]
+}

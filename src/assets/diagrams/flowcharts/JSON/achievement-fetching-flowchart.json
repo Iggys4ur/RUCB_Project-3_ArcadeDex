@@ -1,0 +1,11 @@
+{
+    "title": "Achievement Fetching Flow Chart",
+    "description": "Details the process of fetching and displaying gaming achievements from integrated platforms.",
+    "steps": [
+        "User navigates to their public profile page",
+        "Frontend sends a request to the backend to fetch achievements",
+        "Backend queries the database or gaming platform API for achievements",
+        "Achievements are returned to the frontend",
+        "Achievements are displayed in the achievements section of the profile"
+    ]
+}

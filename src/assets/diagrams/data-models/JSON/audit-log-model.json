@@ -1,0 +1,10 @@
+{
+    "title": "Audit Log Model",
+    "description": "Tracks changes made to user accounts, helpful for monitoring and debugging.",
+    "fields": {
+        "userId": "ObjectId (reference to User model)",
+        "action": "String (e.g., login, password change)",
+        "timestamp": "Date",
+        "details": "String (additional information about the action)"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "title": "System/Platform Settings Page Wireframe",
+    "description": "Options to link or unlink gaming platforms like Steam.",
+    "components": [
+        {
+            "name": "Header",
+            "description": "Includes logo and site navigation links."
+        },
+        {
+            "name": "Linked Accounts Section",
+            "description": "Displays currently linked accounts and options to link new accounts."
+        },
+        {
+            "name": "Unlink Account Button",
+            "description": "Button to unlink a connected gaming account."
+        },
+        {
+            "name": "Footer",
+            "description": "Links to account security and privacy settings."
+        }
+    ]
+}

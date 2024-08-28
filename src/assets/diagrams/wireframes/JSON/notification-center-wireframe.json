@@ -1,0 +1,22 @@
+{
+    "title": "Notification Center Wireframe",
+    "description": "Shows user notifications, such as when a new friend request is received or an account is successfully linked.",
+    "components": [
+        {
+            "name": "Header",
+            "description": "Includes logo and site navigation links."
+        },
+        {
+            "name": "Notifications List",
+            "description": "List of notifications with details and timestamps."
+        },
+        {
+            "name": "Clear All Button",
+            "description": "Option to clear all notifications."
+        },
+        {
+            "name": "Footer",
+            "description": "Links to settings and other user management options."
+        }
+    ]
+}

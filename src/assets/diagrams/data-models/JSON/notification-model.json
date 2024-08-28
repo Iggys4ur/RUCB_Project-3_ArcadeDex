@@ -1,0 +1,11 @@
+{
+    "title": "Notification Model",
+    "description": "Manages notifications related to user activities.",
+    "fields": {
+        "userId": "ObjectId (reference to User model)",
+        "message": "String",
+        "type": "String (e.g., friend request, achievement)",
+        "read": "Boolean",
+        "createdAt": "Date"
+    }
+}

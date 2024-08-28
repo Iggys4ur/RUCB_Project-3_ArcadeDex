@@ -1,0 +1,4 @@
+// Profile Model
+digraph {
+	"Profile Model" [label="{ Profile Model | userId | bio | profilePicture | achievements }" shape=record]
+}

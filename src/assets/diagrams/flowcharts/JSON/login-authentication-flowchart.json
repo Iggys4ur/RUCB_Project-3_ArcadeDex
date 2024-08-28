@@ -1,0 +1,13 @@
+{
+    "title": "Login Authentication Flow Chart",
+    "description": "Displays the process of user authentication, including token generation and validation.",
+    "steps": [
+        "User navigates to the login page",
+        "User enters email and password",
+        "Login request is sent to the backend",
+        "Backend checks email and password against database",
+        "If valid, JWT token is generated and sent to the user",
+        "User is redirected to their profile or dashboard",
+        "Token is stored in local storage for session management"
+    ]
+}

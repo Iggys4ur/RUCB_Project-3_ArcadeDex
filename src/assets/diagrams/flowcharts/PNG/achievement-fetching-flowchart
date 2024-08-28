@@ -1,0 +1,12 @@
+// Achievement Fetching Flow Chart
+digraph {
+	step0 [label="User navigates to their public profile page" shape=box]
+	step1 [label="Frontend sends a request to the backend to fetch achievements" shape=box]
+	step0 -> step1
+	step2 [label="Backend queries the database or gaming platform API for achievements" shape=box]
+	step1 -> step2
+	step3 [label="Achievements are returned to the frontend" shape=box]
+	step2 -> step3
+	step4 [label="Achievements are displayed in the achievements section of the profile" shape=box]
+	step3 -> step4
+}

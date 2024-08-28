@@ -1,0 +1,12 @@
+{
+    "title": "Security Flow Chart",
+    "description": "Highlights the security checks during user interactions, such as login attempts and account changes.",
+    "steps": [
+        "User performs an action (e.g., login, account change)",
+        "Action is intercepted by a security middleware",
+        "Security checks are performed (e.g., token validation, IP checks)",
+        "If action passes security checks, it is allowed to proceed",
+        "If action fails security checks, it is blocked and logged",
+        "User is notified of any security concerns (e.g., unauthorized access attempt)"
+    ]
+}

@@ -1,0 +1,14 @@
+// Profile Update Flow Chart
+digraph {
+	step0 [label="User navigates to account settings page" shape=box]
+	step1 [label="User updates profile fields (username, email, etc.)" shape=box]
+	step0 -> step1
+	step2 [label="Update request is sent to the backend" shape=box]
+	step1 -> step2
+	step3 [label="Backend validates and updates the user profile in the database" shape=box]
+	step2 -> step3
+	step4 [label="Success message is returned to the frontend" shape=box]
+	step3 -> step4
+	step5 [label="User sees updated profile information" shape=box]
+	step4 -> step5
+}

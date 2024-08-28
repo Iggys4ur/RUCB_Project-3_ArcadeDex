@@ -1,0 +1,12 @@
+{
+    "title": "Game Linking Flow Chart",
+    "description": "Explains the process of linking a new game to a user profile.",
+    "steps": [
+        "User navigates to the game linking section",
+        "User selects a game to link",
+        "Game linking request is sent to the backend",
+        "Backend validates the request and updates the user's profile",
+        "Game information is saved in the user's profile",
+        "Linked game appears on the user's public profile"
+    ]
+}

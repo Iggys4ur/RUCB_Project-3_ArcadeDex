@@ -1,0 +1,14 @@
+{
+    "title": "User Registration Flow Chart",
+    "description": "Shows the steps a new user takes to register, from form submission to database entry.",
+    "steps": [
+        "User navigates to the registration page",
+        "User fills out registration form",
+        "Form data is validated on the client side",
+        "Data is sent to the backend",
+        "Backend validates data and checks for existing user",
+        "User information is saved in the database",
+        "Success message is sent to the frontend",
+        "User is redirected to the login page"
+    ]
+}

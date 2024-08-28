@@ -1,0 +1,13 @@
+{
+    "title": "Notification Handling Flow Chart",
+    "description": "Describes how notifications are generated, stored, and displayed to users.",
+    "steps": [
+        "User performs an action (e.g., sends a friend request)",
+        "Notification is created in the backend",
+        "Notification is saved in the database",
+        "User navigates to the notification center",
+        "Frontend requests notifications from the backend",
+        "Notifications are fetched and displayed",
+        "User interacts with notifications (e.g., marks as read, deletes)"
+    ]
+}

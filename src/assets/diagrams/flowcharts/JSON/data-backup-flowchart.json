@@ -1,0 +1,11 @@
+{
+    "title": "Data Backup Flow Chart",
+    "description": "Illustrates the process of backing up user data.",
+    "steps": [
+        "Scheduled backup task is triggered",
+        "Backend retrieves data from the database",
+        "Data is compressed and saved to backup storage",
+        "Backup completion is logged",
+        "Notification is sent to the administrator about backup status"
+    ]
+}

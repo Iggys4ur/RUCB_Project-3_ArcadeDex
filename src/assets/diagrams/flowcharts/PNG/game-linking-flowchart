@@ -1,0 +1,14 @@
+// Game Linking Flow Chart
+digraph {
+	step0 [label="User navigates to the game linking section" shape=box]
+	step1 [label="User selects a game to link" shape=box]
+	step0 -> step1
+	step2 [label="Game linking request is sent to the backend" shape=box]
+	step1 -> step2
+	step3 [label="Backend validates the request and updates the user's profile" shape=box]
+	step2 -> step3
+	step4 [label="Game information is saved in the user's profile" shape=box]
+	step3 -> step4
+	step5 [label="Linked game appears on the user's public profile" shape=box]
+	step4 -> step5
+}

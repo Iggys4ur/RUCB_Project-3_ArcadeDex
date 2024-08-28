@@ -1,0 +1,14 @@
+// Account Linking Flow Chart
+digraph {
+	step0 [label="User navigates to the system/platform settings page" shape=box]
+	step1 [label="User selects a platform to link" shape=box]
+	step0 -> step1
+	step2 [label="User enters required credentials or authorizes the connection" shape=box]
+	step1 -> step2
+	step3 [label="Request is sent to the gaming platform API" shape=box]
+	step2 -> step3
+	step4 [label="API response is validated and saved in the user's profile" shape=box]
+	step3 -> step4
+	step5 [label="User sees linked account information on their profile" shape=box]
+	step4 -> step5
+}

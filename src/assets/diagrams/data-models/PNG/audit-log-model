@@ -1,0 +1,4 @@
+// Audit Log Model
+digraph {
+	"Audit Log Model" [label="{ Audit Log Model | userId | action | timestamp | details }" shape=record]
+}

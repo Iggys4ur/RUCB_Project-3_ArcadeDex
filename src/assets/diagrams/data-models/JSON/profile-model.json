@@ -1,0 +1,10 @@
+{
+    "title": "Profile Model",
+    "description": "Stores user profile information such as gaming achievements and bio.",
+    "fields": {
+        "userId": "ObjectId (reference to User model)",
+        "bio": "String",
+        "profilePicture": "String (URL)",
+        "achievements": "Array of ObjectIds (references to Achievement model)"
+    }
+}

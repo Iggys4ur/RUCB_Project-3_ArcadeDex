@@ -1,0 +1,12 @@
+{
+    "title": "Search Functionality Flow Chart",
+    "description": "Shows how users search for other users, games, or achievements, and how results are displayed.",
+    "steps": [
+        "User enters a search query in the search bar",
+        "Frontend sends a search request to the backend",
+        "Backend processes the search query",
+        "Matching results are fetched from the database",
+        "Results are returned to the frontend",
+        "Search results are displayed to the user"
+    ]
+}

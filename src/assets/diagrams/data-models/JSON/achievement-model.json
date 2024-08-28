@@ -1,0 +1,10 @@
+{
+    "title": "Achievement Model",
+    "description": "Stores data related to specific gaming achievements and accolades.",
+    "fields": {
+        "title": "String",
+        "description": "String",
+        "dateEarned": "Date",
+        "game": "String (name of the game)"
+    }
+}
