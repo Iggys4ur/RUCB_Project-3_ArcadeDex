@@ -5,8 +5,7 @@ const userSchema = new Schema({
   username: {
     type: String,
     required: true,
-    unique: true,
-    minLength: [2, 'Your username must be at least 2 characters in length.']
+    unique: true
   },
 
   email: {
@@ -28,9 +27,9 @@ const userSchema = new Schema({
     minLength: [6, 'Your password must be at least 6 characters in length']
   },
 
-  games: [{
+  linkedAccounts: [{
     type: Schema.Types.ObjectId,
-    ref: 'Game'
+    ref: 'Account'
   }]
 }, {
   // Edit the user's object before it gets sent out in a JSON response to the browser/client

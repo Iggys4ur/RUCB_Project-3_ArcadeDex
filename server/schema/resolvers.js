@@ -1,4 +1,4 @@
-const { User, Turtle } = require('../models');
+const { User, Account, Game } = require('../models');
 const { sign } = require('jsonwebtoken');
 
 const { GraphQLError } = require('graphql');
@@ -112,6 +112,21 @@ const resolvers = {
       return {
         message: 'test'
       }
+    },
+
+    async addAccount(_, args, context) {
+      const user_id = context.user_id;
+
+      const user = await User.findById(user_id);
+      const account = await Account.create({
+        ...args,
+        user: user_id
+      })
+
+      user.linkedAccounts.push(account._id);
+      await user.save();
+
+      return account;
     }
   }
 }
