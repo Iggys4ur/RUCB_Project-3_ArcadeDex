@@ -30,6 +30,7 @@ const typeDefs = gql`
     logoutUser: AuthResponse
 
     addGame(name: String, platform: String, genre: String, releaseDate: String): AuthResponse
+    addAccount: AuthResponse
 }
 `
 module.exports = typeDefs;
