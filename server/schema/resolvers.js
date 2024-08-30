@@ -31,7 +31,7 @@ const resolvers = {
       };
     },
 
-    async getUserGames(_, args, context) {
+    async getUserAccounts(_, args, context) {
       const user_id = context.user_id;
 
       if (!user_id) {
@@ -40,9 +40,9 @@ const resolvers = {
         })
       }
 
-      const user = await User.findById(user_id).populate('games');
+      const user = await User.findById(user_id).populate('linkedAccounts');
 
-      return user.games;
+      return user.linkedAccounts;
     },
   },
 
@@ -105,12 +105,6 @@ const resolvers = {
 
       return {
         message: 'Logged out successfully'
-      }
-    },
-
-    async addGame(_, args, context) {
-      return {
-        message: 'test'
       }
     },
 
