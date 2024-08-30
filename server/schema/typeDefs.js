@@ -4,14 +4,14 @@ const typeDefs = gql`
   type User {
     username: String
     email: String
-    gamerTags: String
+    linkedAccounts: String
 }
 
-  type Game {
-    name: String
-    platform: String
-    genre: String
-    releaseDate: String
+  type Account {
+    user: String
+    steamId: Int
+    personaName: String
+    avatarLink: String
 }
 
   type AuthResponse {
@@ -21,7 +21,7 @@ const typeDefs = gql`
 
   type Query {
     getUser:  AuthResponse
-    getUserGames: [Game]
+    getUserAccounts: [Account]
 }
 
   type Mutation {
@@ -29,7 +29,6 @@ const typeDefs = gql`
     loginUser(email: String, password: String): AuthResponse
     logoutUser: AuthResponse
 
-    addGame(name: String, platform: String, genre: String, releaseDate: String): AuthResponse
     addAccount: AuthResponse
 }
 `

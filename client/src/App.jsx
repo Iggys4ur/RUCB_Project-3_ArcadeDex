@@ -1,12 +1,9 @@
-import { Button, Flex, Input, VStack } from "@chakra-ui/react"
+import Header from "./components/Header"
 function App() {
   return (
-    <Flex>
-      <VStack>
-        <Input variant='filled' placeholder="Test" />
-        <Button colorScheme="orange" />
-      </VStack>
-    </Flex>
+    <>
+      <Header />
+    </>
   )
 }
 
