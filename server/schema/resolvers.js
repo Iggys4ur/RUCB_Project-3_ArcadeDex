@@ -18,7 +18,7 @@ const resolvers = {
         }
       }
 
-      const user = await User.findById(context.user_id);
+      const user = await User.findById(context.user_id).populate('friends');
 
       if (!user) {
         return {
@@ -108,6 +108,18 @@ const resolvers = {
       }
     },
 
+    async editUsername(_, args, context) {
+      const user_id = context.user_id;
+
+      const user = await User.findOneAndUpdate({ _id: user_id }, { username: args.username });
+      await user.save();
+
+      return {
+        message: 'Username Changed',
+        user
+      }
+    },
+
     async addAccount(_, args, context) {
       const user_id = context.user_id;
 
@@ -121,6 +133,43 @@ const resolvers = {
       await user.save();
 
       return account;
+    },
+
+    async addFriend(_, args, context) {
+      const user_id = context.user_id;
+
+      const user = await User.findById(user_id);
+      const friend = await User.findOne({ username: args.username })
+
+      if (!friend) {
+        throw new GraphQLError('No User found')
+      }
+
+      user.friends.push(friend._id);
+      await user.save();
+
+      return {
+        message: 'Friend Added',
+        user: friend
+      }
+    },
+
+    async deleteFriend(_, args, context) {
+      const user_id = context.user_id;
+
+      const user = await User.findById(user_id);
+      const friend = await User.findOne({ username: args.username })
+
+      if (!friend) {
+        throw new GraphQLError('No User found')
+      }
+
+      user.friends.pull(friend._id);
+      await user.save();
+
+      return {
+        message: 'Friend Removed'
+      }
     }
   }
 }
