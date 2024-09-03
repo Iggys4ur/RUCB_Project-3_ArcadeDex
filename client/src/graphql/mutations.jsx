@@ -35,11 +35,15 @@ export const REGISTER_USER = gql`
 export const ADD_FRIEND = gql`
   mutation AddFriend($username: String) {
     addFriend(username: $username) {
-      message
       user {
-        email
         username
+        steamAccount {
+          avatarLink
+          personaName
+          steamId
+        }
       }
+      message
     }
   }
 `

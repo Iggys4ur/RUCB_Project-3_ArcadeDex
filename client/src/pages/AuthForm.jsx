@@ -61,7 +61,7 @@ function AuthForm() {
         }))
       }
 
-      navigate('/')
+      navigate('/user')
     } catch (error) {
       console.log(error)
       setFormData({

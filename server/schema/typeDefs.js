@@ -5,28 +5,29 @@ const typeDefs = gql`
     username: String
     email: String
     friends: [Friend]
+    steamAccount: SteamAccount
 }
 
   type Friend {
+    _id: ID
     username: String
     email: String
-}
-
-  type Account {
-    user: String
-    steamId: Int
-    personaName: String
-    avatarLink: String
 }
 
   type AuthResponse {
     message: String
     user: User
 }
+  
+  type SteamAccount {
+      steamId: ID
+      personaName: String
+      avatarLink: String
+}
 
   type Query {
     getUser:  AuthResponse
-    getUserAccounts: [Account]
+    getUserFriends: [Friend]
 }
 
   type Mutation {
@@ -35,8 +36,6 @@ const typeDefs = gql`
     logoutUser: AuthResponse
 
     editUsername(username: String): AuthResponse
-
-    addAccount: AuthResponse
 
     addFriend(username: String): AuthResponse
     deleteFriend(username: String): AuthResponse

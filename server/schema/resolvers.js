@@ -1,4 +1,4 @@
-const { User, Account, Game } = require('../models');
+const User = require('../models/User')
 const { sign } = require('jsonwebtoken');
 
 const { GraphQLError } = require('graphql');
@@ -31,19 +31,18 @@ const resolvers = {
       };
     },
 
-    async getUserAccounts(_, args, context) {
+    async getUserFriends(_, args, context) {
       const user_id = context.user_id;
 
       if (!user_id) {
-        throw new GraphQLError({
-          message: 'Not Authorized'
-        })
+        throw new GraphQLError('You are not Logged In')
       }
 
-      const user = await User.findById(user_id).populate('linkedAccounts');
+      const user = await User.findById(user_id).populate('friends');
 
-      return user.linkedAccounts;
-    },
+      return user.friends;
+    }
+
   },
 
   Mutation: {
@@ -52,7 +51,6 @@ const resolvers = {
         if (!context.req.user) {
           throw new GraphQLError('Steam Not Attached')
         }
-        console.log(context.req.user)
         const user = await User.create({
           ...args,
           steamAccount: {
@@ -131,27 +129,11 @@ const resolvers = {
       }
     },
 
-    async addAccount(_, args, context) {
-      const user_id = context.user_id;
-
-      const user = await User.findById(user_id);
-      const account = await Account.create({
-        ...args,
-        user: user_id
-      })
-
-      user.linkedAccounts.push(account._id);
-      await user.save();
-
-      return account;
-    },
-
     async addFriend(_, args, context) {
       const user_id = context.user_id;
 
       const user = await User.findById(user_id);
       const friend = await User.findOne({ username: args.username })
-
       if (!friend) {
         throw new GraphQLError('No User found')
       }

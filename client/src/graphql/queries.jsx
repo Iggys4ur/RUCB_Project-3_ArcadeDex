@@ -10,3 +10,13 @@ export const GET_USER = gql`
     }
   }
 `
+
+export const GET_USER_FRIENDS = gql`
+  query GetUserFriends {
+    getUserFriends {
+      _id
+      email
+      username
+    }
+  }
+`

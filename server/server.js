@@ -94,7 +94,6 @@ async function startServer() {
   });
 
   app.get('/', (req, res) => {
-    console.log(req.user)
     res.send(req.isAuthenticated() ? req.user.displayName : 'Logged out');
   });
 
