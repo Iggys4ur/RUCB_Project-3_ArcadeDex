@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { useMutation } from "@apollo/client"
-import { useNavigate } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 import { LOGIN_USER, REGISTER_USER } from '../graphql/mutations'
 import { useStore } from "../store"
@@ -9,7 +9,7 @@ const initialFormData = {
   username: '',
   email: '',
   password: '',
-  isLogin: true
+  isLogin: false
 }
 
 function AuthForm() {
@@ -68,6 +68,7 @@ function AuthForm() {
       <input onChange={handleInputChange} type="text" name="username" placeholder="Enter a Username" />
       <input onChange={handleInputChange} type="email" name="email" placeholder="Enter an email" />
       <input onChange={handleInputChange} type="password" name="password" placeholder="Enter a password" />
+      <Link to="/auth/steam">Link to Steam</Link>
       <button>Submit</button>
     </form>
   )

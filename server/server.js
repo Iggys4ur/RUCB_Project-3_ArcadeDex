@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors')
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const cookieParser = require('cookie-parser');
@@ -16,8 +17,12 @@ const typeDefs = require('./schema/typeDefs');
 const resolvers = require('./schema/resolvers');
 
 const db = require('./config/connection');
+const { createPublicKey } = require('crypto');
 
 const app = express();
+
+app.use(cors());
+
 const PORT = process.env.PORT || 3001;
 const dbURL = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/ArcadeDex';
 
@@ -89,6 +94,7 @@ async function startServer() {
   });
 
   app.get('/', (req, res) => {
+    console.log(req.user)
     res.send(req.isAuthenticated() ? req.user.displayName : 'Logged out');
   });
 
@@ -101,7 +107,10 @@ async function startServer() {
   app.get('/auth/steam/return',
     passport.authenticate('steam', { failureRedirect: '/' }),
     (req, res) => {
-      res.redirect('/');
+      if (process.env.PORT) {
+        return res.redirect('/auth');
+      }
+      res.redirect('http://localhost:5173/auth');
     });
   app.get('/logout', (req, res) => {
     req.logout();

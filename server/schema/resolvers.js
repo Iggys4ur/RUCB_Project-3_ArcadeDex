@@ -49,7 +49,18 @@ const resolvers = {
   Mutation: {
     async registerUser(_, args, context) {
       try {
-        const user = await User.create(args);
+        if (!context.req.user) {
+          throw new GraphQLError('Steam Not Attached')
+        }
+        console.log(context.req.user)
+        const user = await User.create({
+          ...args,
+          steamAccount: {
+            steamId: context.req.user.id,
+            personaName: context.req.user._json.personaname,
+            avatarLink: context.req.user._json.avatar
+          }
+        });
 
         // Create a cookie and attach a JWT token
         const token = createToken(user._id);

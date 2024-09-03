@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom"
+import axios from "axios"
 
 import Header from "./components/Header"
 
@@ -10,6 +11,14 @@ import Protect from "./components/Protect"
 
 function App() {
   const { state } = useStore()
+  const res = async () => {
+    const response = await axios({
+      url: '/'
+    })
+    return response.data
+  }
+
+  console.log(res())
   return (
     <>
       {state.loading && (
