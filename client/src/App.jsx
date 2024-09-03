@@ -1,48 +1,25 @@
-import { Routes, Route } from "react-router-dom"
-import axios from "axios"
-
-import Header from "./components/Header"
-
-import HomePage from "./pages/HomePage"
-import AuthForm from "./pages/AuthForm"
-import UserPage from "./pages/UserPage"
-import { useStore } from "./store"
-import Protect from "./components/Protect"
+// src/App.jsx
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import PlayerProfile from './pages/PlayerProfile';
+import MyAccount from './pages/MyAccount';
 
 function App() {
-  const { state } = useStore()
-  const res = async () => {
-    const response = await axios({
-      url: '/'
-    })
-    return response.data
-  }
-
   return (
-    <>
-      {state.loading && (
-        <div>
-          <h1>Loading...</h1>
-        </div>
-      )}
-
-      <Header />
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/auth" element={(
-          <Protect requireAuth={false}>
-            <AuthForm />
-          </Protect>
-        )} />
-        <Route path="/user" element={(
-          <Protect requireAuth={true}>
-            <UserPage />
-          </Protect>
-        )} />
-      </Routes>
-    </>
-  )
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+          <Route path="/player-profile/:id" element={<PlayerProfile />} />
+          <Route path="/my-account" element={<MyAccount />} />
+          {/* Add more routes as needed */}
+        </Routes>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
