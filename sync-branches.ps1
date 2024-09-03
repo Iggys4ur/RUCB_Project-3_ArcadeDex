@@ -6,13 +6,11 @@
  
   # Identify remote branches not existing locally
   $remoteOnlyBranches = $remoteBranches | Where-Object { $_ -notin $localBranches }
-  Write-Output "Remote branches not existing locally:"
-  $remoteOnlyBranches
+  Write-Output "Remote branches not existing locally: $remoteOnlyBranches"
  
   # Identify local branches not existing remotely
   $localOnlyBranches = $localBranches | Where-Object { $_ -notin $remoteBranches }
-  Write-Output "Local branches not existing remotely:"
-  $localOnlyBranches
+  Write-Output "Local branches not existing remotely: $localOnlyBranches"
  
   # Pull remote-only branches to local repository
   foreach ($branch in $remoteOnlyBranches) {
