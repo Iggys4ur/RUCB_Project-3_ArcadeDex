@@ -4,7 +4,12 @@ const typeDefs = gql`
   type User {
     username: String
     email: String
-    linkedAccounts: String
+    friends: [Friend]
+}
+
+  type Friend {
+    username: String
+    email: String
 }
 
   type Account {
@@ -29,7 +34,12 @@ const typeDefs = gql`
     loginUser(email: String, password: String): AuthResponse
     logoutUser: AuthResponse
 
+    editUsername(username: String): AuthResponse
+
     addAccount: AuthResponse
+
+    addFriend(username: String): AuthResponse
+    deleteFriend(username: String): AuthResponse
 }
 `
 module.exports = typeDefs;

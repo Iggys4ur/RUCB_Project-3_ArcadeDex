@@ -30,6 +30,11 @@ const userSchema = new Schema({
   linkedAccounts: [{
     type: Schema.Types.ObjectId,
     ref: 'Account'
+  }],
+
+  friends: [{
+    type: Schema.Types.ObjectId,
+    ref: 'User'
   }]
 }, {
   // Edit the user's object before it gets sent out in a JSON response to the browser/client

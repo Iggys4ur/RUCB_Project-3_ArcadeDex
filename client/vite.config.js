@@ -11,6 +11,12 @@ export default defineConfig({
         changeOrigin: true,
         ws: true,
         secure: false,
+      },
+      '/auth/steam': {
+        target: 'http://localhost:3001',
+        changeOrigin: true,
+        ws: true,
+        secure: false,
       }
     }
   }

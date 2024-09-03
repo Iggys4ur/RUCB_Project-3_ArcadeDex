@@ -77,7 +77,6 @@ async function startServer() {
     apiKey: process.env.STEAM_KEY,
   }, (identifier, profile, done) => {
     // In a real application, you would save the user profile to your database here
-    console.log(profile)
     return done(null, profile);
   }));
   // Serialize user into the session
@@ -90,7 +89,6 @@ async function startServer() {
   });
 
   app.get('/', (req, res) => {
-    console.log(req)
     res.send(req.isAuthenticated() ? req.user.displayName : 'Logged out');
   });
 

@@ -4,6 +4,8 @@ import { BrowserRouter } from 'react-router-dom'
 import { ApolloClient, InMemoryCache, ApolloProvider, HttpLink } from '@apollo/client'
 import { onError } from '@apollo/client/link/error'
 
+import { StoreProvider } from './store'
+
 import App from './App'
 import './App.css'
 
@@ -32,7 +34,9 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
       <ApolloProvider client={client}>
-        <App />
+        <StoreProvider>
+          <App />
+        </StoreProvider>
       </ApolloProvider>
     </BrowserRouter>
   </StrictMode>,

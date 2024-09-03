@@ -3,6 +3,7 @@ import { useMutation } from "@apollo/client"
 import { useNavigate } from "react-router-dom"
 
 import { LOGIN_USER, REGISTER_USER } from '../graphql/mutations'
+import { useStore } from "../store"
 
 const initialFormData = {
   username: '',
@@ -13,6 +14,7 @@ const initialFormData = {
 
 function AuthForm() {
   const [formData, setFormData] = useState(initialFormData)
+  const { setState } = useStore()
 
   const [loginUser] = useMutation(LOGIN_USER, {
     variables: formData
@@ -39,11 +41,19 @@ function AuthForm() {
 
       if (formData.isLogin) {
         res = await loginUser()
+        await setState(oldState => ({
+          ...oldState,
+          user: res.data.loginUser.user
+        }))
       } else {
         res = await registerUser()
+        await setState(oldState => ({
+          ...oldState,
+          user: res.data.registerUser.user
+        }))
       }
 
-      navigate('/')
+      navigate('/user')
     } catch (error) {
       console.log(error)
       setFormData({
