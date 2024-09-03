@@ -1,6 +1,24 @@
 const { model, Schema } = require('mongoose');
 const { hash, compare } = require('bcrypt');
 
+const steamAccountSchema = new Schema({
+  steamId: {
+    type: Number,
+    required: true,
+    unique: true,
+  },
+
+  personaName: {
+    type: String,
+    required: true,
+  },
+
+  avatarLink: {
+    type: String,
+    required: true
+  }
+})
+
 const userSchema = new Schema({
   username: {
     type: String,
@@ -27,9 +45,11 @@ const userSchema = new Schema({
     minLength: [6, 'Your password must be at least 6 characters in length']
   },
 
-  linkedAccounts: [{
+  steamAccount: steamAccountSchema,
+
+  friends: [{
     type: Schema.Types.ObjectId,
-    ref: 'Account'
+    ref: 'User'
   }]
 }, {
   // Edit the user's object before it gets sent out in a JSON response to the browser/client
