@@ -3,7 +3,6 @@ import { useStore } from "../store"
 
 function HomePage() {
   const { state } = useStore()
-  console.log(state.user.username)
 
   return (
     <>

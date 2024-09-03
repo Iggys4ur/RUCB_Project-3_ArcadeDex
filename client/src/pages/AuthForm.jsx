@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useMutation } from "@apollo/client"
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
 
 import { LOGIN_USER, REGISTER_USER } from '../graphql/mutations'
 import { useStore } from "../store"
@@ -14,6 +14,7 @@ const initialFormData = {
 
 function AuthForm() {
   const [formData, setFormData] = useState(initialFormData)
+  const [showForm, setShowForm] = useState(false)
   const { setState } = useStore()
 
   const [loginUser] = useMutation(LOGIN_USER, {
@@ -25,6 +26,13 @@ function AuthForm() {
   })
 
   const navigate = useNavigate()
+  const location = useLocation()
+
+  useEffect(() => {
+    if (location.search.includes('linked')) {
+      setShowForm(true)
+    }
+  }, [])
 
   const handleInputChange = event => {
     setFormData({
@@ -65,10 +73,14 @@ function AuthForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <input onChange={handleInputChange} type="text" name="username" placeholder="Enter a Username" />
-      <input onChange={handleInputChange} type="email" name="email" placeholder="Enter an email" />
-      <input onChange={handleInputChange} type="password" name="password" placeholder="Enter a password" />
-      <Link to="/auth/steam">Link to Steam</Link>
+      {showForm ? (
+        <>
+          <input onChange={handleInputChange} type="text" name="username" placeholder="Enter a Username" />
+          <input onChange={handleInputChange} type="email" name="email" placeholder="Enter an email" />
+          <input onChange={handleInputChange} type="password" name="password" placeholder="Enter a password" />
+        </>
+      ) : <Link to="http://localhost:3001/auth/steam">Link to Steam</Link>}
+
       <button>Submit</button>
     </form>
   )

@@ -18,7 +18,6 @@ function App() {
     return response.data
   }
 
-  console.log(res())
   return (
     <>
       {state.loading && (

@@ -110,7 +110,7 @@ async function startServer() {
       if (process.env.PORT) {
         return res.redirect('/auth');
       }
-      res.redirect('http://localhost:5173/auth');
+      res.redirect('http://localhost:5173/auth?linked=true');
     });
   app.get('/logout', (req, res) => {
     req.logout();
