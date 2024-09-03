@@ -41,5 +41,12 @@ const typeDefs = gql`
     addFriend(username: String): AuthResponse
     deleteFriend(username: String): AuthResponse
 }
+
+//   type Friend {
+//     friendName: String
+//     friendUUID: UUID
+//     friendLevel: Int
+//     dateAdded: String
+// }
 `
 module.exports = typeDefs;
