@@ -1,5 +1,7 @@
 # ArcadeDex
 
+branch: react-pages
+
 ## *"Like LinkTree but for eSports"*
 ### *Project 3 | Group 3 | RU Coding Bootcamp [06/2024]*
 ### *- written by: Eli (Iggys4ur) and Jaylen (Frxctxl)*
