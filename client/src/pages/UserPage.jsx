@@ -10,12 +10,22 @@ const initialFriend = {
 
 function UserPage() {
   const { state } = useStore()
+  const [unfriend, setUnFriend] = useState({
+    username: ''
+  })
   const [friend, setFriend] = useState(initialFriend)
   const [friends, setFriends] = useState([])
 
   const [addFriend] = useMutation(ADD_FRIEND, {
     variables: friend,
-    refetchQueries: [GET_USER_FRIENDS]
+    refetchQueries: [GET_USER_FRIENDS],
+    awaitRefetchQueries: true
+  })
+
+  const [deleteFriend] = useMutation(DELETE_FRIEND, {
+    variables: unfriend,
+    refetchQueries: [GET_USER_FRIENDS],
+    awaitRefetchQueries: true
   })
 
   useQuery(GET_USER_FRIENDS, {
@@ -33,8 +43,20 @@ function UserPage() {
     })
   }
 
+  const handleDeleteFriend = async event => {
+    setUnFriend({
+      username: event.target.id,
+    })
+
+    try {
+      await deleteFriend()
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   const handleAddFriend = async event => {
-    event.preventDefault()
 
     try {
       await addFriend()
@@ -55,11 +77,13 @@ function UserPage() {
         <input onChange={handleInputChange} type="text" name="username" value={friend.username} placeholder="Do you want to add someone?" />
       </form>
 
-      <div className="friend-output">
+      <div className="friend-output grid">
         {friends.map(friendObj => (
-          <article key={friendObj._id}>
-            <h1>{friendObj.username}</h1>
-            <h1>{friendObj._id}</h1>
+          <article key={friendObj._id} className="flex flex-col bg-black text-white size-64 rounded-2xl">
+            <h1 className="self-center my-4 text-lg">{friendObj.username}</h1>
+            <h1>AKA: {friendObj.steamAccount.personaName}</h1>
+            <img src={friendObj.steamAccount.avatarLink} className="size-24" />
+            <button onDoubleClick={handleDeleteFriend} id={friendObj.username} className="bg-red-950 p-2 mx-14 rounded-2xl">Unadd User</button>
           </article>
         ))}
       </div>

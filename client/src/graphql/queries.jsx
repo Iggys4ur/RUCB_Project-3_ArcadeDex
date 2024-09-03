@@ -17,6 +17,11 @@ export const GET_USER_FRIENDS = gql`
       _id
       email
       username
+      steamAccount {
+        avatarLink
+        personaName
+        steamId
+      }
     }
   }
 `

@@ -8,6 +8,7 @@ import AuthForm from "./pages/AuthForm"
 import UserPage from "./pages/UserPage"
 import { useStore } from "./store"
 import Protect from "./components/Protect"
+import ChangeUser from "./pages/ChangeUser"
 
 function App() {
   const { state } = useStore()
@@ -38,6 +39,11 @@ function App() {
         <Route path="/user" element={(
           <Protect requireAuth={true}>
             <UserPage />
+          </Protect>
+        )} />
+        <Route path="/change" element={(
+          <Protect requireAuth={true}>
+            <ChangeUser />
           </Protect>
         )} />
       </Routes>
