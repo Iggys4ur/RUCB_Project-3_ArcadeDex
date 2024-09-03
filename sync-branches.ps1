@@ -1,6 +1,9 @@
   # Get the list of remote branches
   $remoteBranches = git branch -r | ForEach-Object { $_.Trim() -replace 'origin/', '' }
  
+  # Filter out 'HEAD -> main' from the remote branches
+  $remoteBranches = $remoteBranches | Where-Object { $_ -ne 'HEAD -> main' }
+
   # Get the list of local branches
   $localBranches = git branch | ForEach-Object { $_.Trim() -replace '\* ', '' }
  
