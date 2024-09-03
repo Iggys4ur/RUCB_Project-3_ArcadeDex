@@ -20,8 +20,8 @@
           Write-Output "Pulled remote branch: $branch"
           }
  
-          # Push local-only branches to GitHub
-          foreach ($branch in $localOnlyBranches) {
-              git push origin $branch
-                  Write-Output "Pushed local branch: $branch"
-                  }
+  # Push local-only branches to GitHub
+  foreach ($branch in $localOnlyBranches) {
+      git push origin $branch
+          Write-Output "Pushed local branch: $branch"
+          }
