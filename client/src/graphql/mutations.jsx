@@ -31,3 +31,31 @@ export const REGISTER_USER = gql`
     }
   }
 `
+
+export const ADD_FRIEND = gql`
+  mutation AddFriend($username: String) {
+    addFriend(username: $username) {
+      message
+      user {
+        email
+        username
+      }
+    }
+  }
+`
+
+export const DELETE_FRIEND = gql`
+  mutation DeleteFriend($username: String) {
+    deleteFriend(username: $username) {
+      message
+    }
+  }
+`
+
+export const EDIT_USERNAME = gql`
+  mutation EditUsername($username: String) {
+    editUsername(username: $username) {
+      message
+    }
+  }
+`

@@ -6,6 +6,7 @@ import HomePage from "./pages/HomePage"
 import AuthForm from "./pages/AuthForm"
 import UserPage from "./pages/UserPage"
 import { useStore } from "./store"
+import Protect from "./components/Protect"
 
 function App() {
   const { state } = useStore()
@@ -21,8 +22,16 @@ function App() {
 
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/auth" element={<AuthForm />} />
-        <Route path="/user" element={<UserPage />} />
+        <Route path="/auth" element={(
+          <Protect requireAuth={false}>
+            <AuthForm />
+          </Protect>
+        )} />
+        <Route path="/user" element={(
+          <Protect requireAuth={true}>
+            <UserPage />
+          </Protect>
+        )} />
       </Routes>
     </>
   )

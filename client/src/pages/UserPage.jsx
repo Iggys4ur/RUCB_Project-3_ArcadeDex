@@ -5,7 +5,7 @@ function UserPage() {
 
   return (
     <>
-      <h1>Welcome {state.user.username}</h1>
+      <h1 className="self-center">Welcome {state.user.username}</h1>
       <h1>Email: {state.user.email}</h1>
     </>
   )
