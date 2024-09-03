@@ -5,18 +5,20 @@ const typeDefs = gql`
     username: String
     email: String
     friends: [Friend]
+    dateCreated: Date
 }
 
   type Friend {
     username: String
     email: String
+    dateAdded: String
 }
 
   type Account {
     user: String
     platformName: String
     platformId: Int
-    
+
     personaName: String
     avatarLink: String
 }
