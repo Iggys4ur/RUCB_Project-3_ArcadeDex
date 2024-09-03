@@ -14,7 +14,9 @@ const typeDefs = gql`
 
   type Account {
     user: String
-    steamId: Int
+    platformName: String
+    platformId: Int
+    
     personaName: String
     avatarLink: String
 }
