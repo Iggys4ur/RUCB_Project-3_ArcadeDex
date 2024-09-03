@@ -5,6 +5,8 @@ const typeDefs = gql`
     username: String
     email: String
     linkedAccounts: String
+    userUUID: UUID
+    userLevel: Int
 }
 
   type Account {
@@ -31,5 +33,12 @@ const typeDefs = gql`
 
     addAccount: AuthResponse
 }
+
+//   type Friend {
+//     friendName: String
+//     friendUUID: UUID
+//     friendLevel: Int
+//     dateAdded: String
+// }
 `
 module.exports = typeDefs;
