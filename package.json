@@ -36,7 +36,10 @@
     "yargs-parser": "^21.1.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd client && npm run build",
+    "install": "cd server && npm i",
+    "deploy": "npm run build && git add -A && git commit -m \"ready for deploy\" && git push origin HEAD",
+    "start": "cd server && npm start",
     "dev": "concurrently \"cd ./server && npm run dev\" \"cd ./client && npm run dev\""
   },
   "keywords": [],
