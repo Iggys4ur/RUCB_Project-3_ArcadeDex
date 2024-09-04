@@ -86,7 +86,7 @@ function AuthForm() {
           <input onChange={handleInputChange} type="email" name="email" placeholder="Enter an email" />
           <input onChange={handleInputChange} type="password" name="password" placeholder="Enter a password" />
         </>
-      ) : <Link className="p-2 justify-self-center bg-slate-900 text-white text-3xl rounded-lg" to="http://localhost:3001/auth/steam">Link to Steam</Link>}
+      ) : <Link className="p-2 justify-self-center bg-slate-900 text-white text-3xl rounded-lg" to="/auth/steam">Link to Steam</Link>}
 
       {formData.isLogin ? (
         <p className="text-center">Need an Account? <span className="text-red-600" onClick={() => toggleAuthState(false)}>Click Here</span></p>
