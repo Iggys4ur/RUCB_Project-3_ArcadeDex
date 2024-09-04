@@ -5,13 +5,9 @@ function Header() {
     <header className="bg-red-900 text-white flex justify-between">
       <h1 className="text-5xl m-3 p-2">ArcadeDex</h1>
 
-      <section className="text-2xl">
-        <NavLink to="/auth">
-          <h4>Login</h4>
-        </NavLink>
-
-        <h4>Search</h4>
-      </section>
+      <NavLink to="/auth">
+        <h4 className="text-2xl m-4 p-2">Login</h4>
+      </NavLink>
     </header>
   )
 }

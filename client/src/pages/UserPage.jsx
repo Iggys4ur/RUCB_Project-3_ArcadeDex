@@ -72,20 +72,25 @@ function UserPage() {
   return (
     <div className="flex flex-col">
       <h1 className="self-center text-3xl p-16">Welcome, {state.user.username}</h1>
-      <h1>Email: {state.user.email}</h1>
-      <form onSubmit={handleAddFriend}>
-        <input onChange={handleInputChange} type="text" name="username" value={friend.username} placeholder="Do you want to add someone?" />
-      </form>
+      <div className="flex justify-around">
+        <form onSubmit={handleAddFriend}>
+          <div>
+            <label htmlFor="username">Please enter the username of who you want to add: </label>
+            <input onChange={handleInputChange} type="text" name="username" value={friend.username} className="rounded-md px-2 py-1" placeholder="username" />
+          </div>
 
-      <div className="friend-output grid">
-        {friends.map(friendObj => (
-          <article key={friendObj._id} className="flex flex-col bg-black text-white size-64 rounded-2xl">
-            <h1 className="self-center my-4 text-lg">{friendObj.username}</h1>
-            <h1>AKA: {friendObj.steamAccount.personaName}</h1>
-            <img src={friendObj.steamAccount.avatarLink} className="size-24" />
-            <button onDoubleClick={handleDeleteFriend} id={friendObj.username} className="bg-red-950 p-2 mx-14 rounded-2xl">Unadd User</button>
-          </article>
-        ))}
+        </form>
+
+        <div className="friend-output grid">
+          {friends.map(friendObj => (
+            <article key={friendObj._id} className="flex flex-col bg-black text-white size-64 rounded-2xl">
+              <h1 className="self-center my-4 text-lg">{friendObj.username}</h1>
+              <h1>AKA: {friendObj.steamAccount.personaName}</h1>
+              <img src={friendObj.steamAccount.avatarLink} className="size-24 self-center" />
+              <button onDoubleClick={handleDeleteFriend} id={friendObj.username} className="bg-red-950 p-2 mx-14 rounded-2xl">Unadd User</button>
+            </article>
+          ))}
+        </div>
       </div>
     </div>
   )

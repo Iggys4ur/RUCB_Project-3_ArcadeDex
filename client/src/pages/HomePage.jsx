@@ -5,9 +5,9 @@ function HomePage() {
   const { state } = useStore()
 
   return (
-    <>
-      <h1>Homepage</h1>
-    </>
+    <div className="flex flex-col items-center">
+      <h1 className="text-4xl m-12">Welcome to the ArcadeDex!</h1>
+    </div>
   )
 }
 

@@ -28,6 +28,13 @@ function AuthForm() {
   const navigate = useNavigate()
   const location = useLocation()
 
+  const toggleAuthState = (newValue) => {
+    setFormData({
+      ...formData,
+      isLogin: newValue
+    })
+  }
+
   useEffect(() => {
     if (location.search.includes('linked')) {
       setShowForm(true)
@@ -72,14 +79,20 @@ function AuthForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="grid grid-cols-1 gap-2 my-4">
       {showForm ? (
         <>
           <input onChange={handleInputChange} type="text" name="username" placeholder="Enter a Username" />
           <input onChange={handleInputChange} type="email" name="email" placeholder="Enter an email" />
           <input onChange={handleInputChange} type="password" name="password" placeholder="Enter a password" />
         </>
-      ) : <Link to="http://localhost:3001/auth/steam">Link to Steam</Link>}
+      ) : <Link className="p-2 justify-self-center bg-slate-900 text-white text-3xl rounded-lg" to="http://localhost:3001/auth/steam">Link to Steam</Link>}
+
+      {formData.isLogin ? (
+        <p className="text-center">Need an Account? <span className="text-red-600" onClick={() => toggleAuthState(false)}>Click Here</span></p>
+      ) : (
+        <p className="text-center">Already Registered? <span className="text-red-600" onClick={() => toggleAuthState(true)}>Click Here</span></p>
+      )}
 
       <button>Submit</button>
     </form>

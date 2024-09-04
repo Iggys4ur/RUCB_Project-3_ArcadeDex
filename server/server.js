@@ -77,8 +77,8 @@ async function startServer() {
 
   // Configure passport-steam
   passport.use(new SteamStrategy({
-    returnURL: 'http://localhost:3001/auth/steam/return',
-    realm: 'http://localhost:3001/',
+    returnURL: process.env.PORT ? process.env.RENDER_EXTERNAL_URL + '/auth/steam/return' : 'http://localhost:3001/auth/steam/return',
+    realm: process.env.PORT ? process.env.RENDER_EXTERNAL_URL : 'http://localhost:3001',
     apiKey: process.env.STEAM_KEY,
   }, (identifier, profile, done) => {
     // In a real application, you would save the user profile to your database here
@@ -107,7 +107,7 @@ async function startServer() {
     passport.authenticate('steam', { failureRedirect: '/' }),
     (req, res) => {
       if (process.env.PORT) {
-        return res.redirect('/auth');
+        return res.redirect('/auth?linked=true');
       }
       res.redirect('http://localhost:5173/auth?linked=true');
     });
