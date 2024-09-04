@@ -1,3 +1,5 @@
+# git-pull-all.ps1
+
 # Get the list of branches
 $branches = git branch
 
