@@ -93,10 +93,6 @@ async function startServer() {
     done(null, obj);
   });
 
-  app.get('/', (req, res) => {
-    res.send(req.isAuthenticated() ? req.user.displayName : 'Logged out');
-  });
-
   app.get('/auth/steam',
     passport.authenticate('steam', { failureRedirect: '/' }),
     (req, res) => {
