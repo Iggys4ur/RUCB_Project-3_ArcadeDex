@@ -1,0 +1,122 @@
+
+Create a highly aesthetic and functional `home.jsx` page for the ArcadeDex web application.
+
+Goal:
+Design and implement a `home.jsx` file using React and Tailwind CSS that integrates seamlessly with the current MERN stack structure. Ensure the design is both visually appealing and functionally rich, utilizing available data models, functions, and GraphQL queries effectively.
+
+Components to include:
+Component: Header
+  Purpose: Navigation component to be used across various pages for consistent UX.
+  Integration: Include links to other pages, user profile, and settings.
+
+Component: WelcomeBanner
+  Purpose: Personalized welcome message displaying user's name and linked account data.
+  Data Source: User model, GraphQL query for user data.
+
+Component: AchievementShowcase
+  Purpose: Highlight recent achievements of the user.
+  Data Source: Achievement model, GraphQL query for recent achievements.
+
+Component: GameHighlights
+  Purpose: Display a list of games the user is interested in or has linked.
+  Data Source: Game model, GraphQL query for user-linked games.
+
+Component: FriendActivityFeed
+  Purpose: Show recent activities of friends.
+  Data Source: User model, Friends relationship, GraphQL query for friend activities.
+
+
+
+Requirements:
+- Ensure all components are modular and reusable.
+- Maintain a clean, responsive design using Tailwind CSS.
+- Use GraphQL queries for data fetching to keep components dynamic.
+- Include detailed comments and documentation for maintainability.
+- Export mockup images and the `home.jsx` file in both raw and documented forms for demonstration.
+
+Expected Outputs:
+- Mockup Images: img/home/mockups/1.png, img/home/mockups/2.png
+- Screenshot: img/home/screenshot/
+- Home.jsx Files: Raw - rough-draft/raw/home.jsx, Commented - rough-draft/demo/home.jsx
+
+Placeholders:
+{COMPONENT_PATH}: A placeholder for the file path where reusable components are stored, typically `src/components/`.
+{IMAGE_PATH}: A placeholder for the path to images used in the application, could be something like `public/img/` or `src/assets/images/`.
+{USER_DATA_QUERY}: A placeholder for the GraphQL query that retrieves user data, replace with the actual query or variable that holds the query.
+{ACHIEVEMENTS_QUERY}: A placeholder for the GraphQL query to fetch user achievements, replace with the actual query used in the GraphQL API.
+{GAMES_QUERY}: A placeholder for the GraphQL query to retrieve game data, replace with the specific query for fetching games.
+{FRIENDS_ACTIVITY_QUERY}: A placeholder for the GraphQL query to get friends' activity data, replace with the corresponding query from the API.
+{OUTPUT_PATH}: A placeholder for the path where output files are saved, such as the path for saving screenshots or generated files.
+
+
+Tone:
+Creative, enthusiastic, technical, and user-experience-focused. Aim for an engaging, informative, and visionary narrative.
+
+Instructions:
+1. Use the content provided in the arcadex.zip and project-3_assignment.md to guide the creation of React and Tailwind pages.
+2. Follow the above components, requirements, and placeholders to ensure the resulting code is modular, scalable, and aligns with the MERN stack and project goals.
+3. Incorporate Tailwind CSS for styling and ensure the layout is responsive and user-friendly.
+4. Leverage available data models and GraphQL queries for dynamic content loading.
+5. Generate the final output files as specified in the outputs section.
+
+
+Create a highly aesthetic and functional `home.jsx` page for the ArcadeDex web application.
+
+Goal:
+Design and implement a `home.jsx` file using React and Tailwind CSS that integrates seamlessly with the current MERN stack structure. Ensure the design is both visually appealing and functionally rich, utilizing available data models, functions, and GraphQL queries effectively.
+
+Components to include:
+Component: Header
+  Purpose: Navigation component to be used across various pages for consistent UX.
+  Integration: Include links to other pages, user profile, and settings.
+
+Component: WelcomeBanner
+  Purpose: Personalized welcome message displaying user's name and linked account data.
+  Data Source: User model, GraphQL query for user data.
+
+Component: AchievementShowcase
+  Purpose: Highlight recent achievements of the user.
+  Data Source: Achievement model, GraphQL query for recent achievements.
+
+Component: GameHighlights
+  Purpose: Display a list of games the user is interested in or has linked.
+  Data Source: Game model, GraphQL query for user-linked games.
+
+Component: FriendActivityFeed
+  Purpose: Show recent activities of friends.
+  Data Source: User model, Friends relationship, GraphQL query for friend activities.
+
+
+
+Requirements:
+- Ensure all components are modular and reusable.
+- Maintain a clean, responsive design using Tailwind CSS.
+- Use GraphQL queries for data fetching to keep components dynamic.
+- Include detailed comments and documentation for maintainability.
+- Export mockup images and the `home.jsx` file in both raw and documented forms for demonstration.
+
+Expected Outputs:
+- Mockup Images: img/home/mockups/1.png, img/home/mockups/2.png
+- Screenshot: img/home/screenshot/
+- Home.jsx Files: Raw - rough-draft/raw/home.jsx, Commented - rough-draft/demo/home.jsx
+
+Placeholders:
+{COMPONENT_PATH}: A placeholder for the file path where reusable components are stored, typically `src/components/`.
+{IMAGE_PATH}: A placeholder for the path to images used in the application, could be something like `public/img/` or `src/assets/images/`.
+{USER_DATA_QUERY}: A placeholder for the GraphQL query that retrieves user data, replace with the actual query or variable that holds the query.
+{ACHIEVEMENTS_QUERY}: A placeholder for the GraphQL query to fetch user achievements, replace with the actual query used in the GraphQL API.
+{GAMES_QUERY}: A placeholder for the GraphQL query to retrieve game data, replace with the specific query for fetching games.
+{FRIENDS_ACTIVITY_QUERY}: A placeholder for the GraphQL query to get friends' activity data, replace with the corresponding query from the API.
+{OUTPUT_PATH}: A placeholder for the path where output files are saved, such as the path for saving screenshots or generated files.
+
+
+Tone:
+Creative, enthusiastic, technical, and user-experience-focused. Aim for an engaging, informative, and visionary narrative.
+
+Instructions:
+1. Use the content provided in the arcadex.zip and project-3_assignment.md to guide the creation of React and Tailwind pages.
+2. Follow the above components, requirements, and placeholders to ensure the resulting code is modular, scalable, and aligns with the MERN stack and project goals.
+3. Incorporate Tailwind CSS for styling and ensure the layout is responsive and user-friendly.
+4. Leverage available data models and GraphQL queries for dynamic content loading.
+5. Generate the final output files as specified in the outputs section.
+

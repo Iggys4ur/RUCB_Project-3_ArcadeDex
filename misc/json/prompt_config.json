@@ -1,0 +1,82 @@
+{
+    "task": "Create a highly aesthetic and functional `home.jsx` page for the ArcadeDex web application.",
+    "details": {
+        "goal": "Design and implement a `home.jsx` file using React and Tailwind CSS that integrates seamlessly with the current MERN stack structure. Ensure the design is both visually appealing and functionally rich, utilizing available data models, functions, and GraphQL queries effectively.",
+        "components": [
+            {
+                "name": "Header",
+                "purpose": "Navigation component to be used across various pages for consistent UX.",
+                "integration": "Include links to other pages, user profile, and settings."
+            },
+            {
+                "name": "WelcomeBanner",
+                "purpose": "Personalized welcome message displaying user's name and linked account data.",
+                "data_source": "User model, GraphQL query for user data."
+            },
+            {
+                "name": "AchievementShowcase",
+                "purpose": "Highlight recent achievements of the user.",
+                "data_source": "Achievement model, GraphQL query for recent achievements."
+            },
+            {
+                "name": "GameHighlights",
+                "purpose": "Display a list of games the user is interested in or has linked.",
+                "data_source": "Game model, GraphQL query for user-linked games."
+            },
+            {
+                "name": "FriendActivityFeed",
+                "purpose": "Show recent activities of friends.",
+                "data_source": "User model, Friends relationship, GraphQL query for friend activities."
+            }
+        ],
+        "requirements": [
+            "Ensure all components are modular and reusable.",
+            "Maintain a clean, responsive design using Tailwind CSS.",
+            "Use GraphQL queries for data fetching to keep components dynamic.",
+            "Include detailed comments and documentation for maintainability.",
+            "Export mockup images and the `home.jsx` file in both raw and documented forms for demonstration."
+        ],
+        "outputs": {
+            "mockup_images": [
+                "img/home/mockups/1.png",
+                "img/home/mockups/2.png"
+            ],
+            "screenshot": "img/home/screenshot/",
+            "home_jsx_files": {
+                "raw": "rough-draft/raw/home.jsx",
+                "commented": "rough-draft/demo/home.jsx"
+            }
+        }
+    },
+    "placeholders": [
+        {
+            "placeholder": "{COMPONENT_PATH}",
+            "description": "A placeholder for the file path where reusable components are stored, typically `src/components/`."
+        },
+        {
+            "placeholder": "{IMAGE_PATH}",
+            "description": "A placeholder for the path to images used in the application, could be something like `public/img/` or `src/assets/images/`."
+        },
+        {
+            "placeholder": "{USER_DATA_QUERY}",
+            "description": "A placeholder for the GraphQL query that retrieves user data, replace with the actual query or variable that holds the query."
+        },
+        {
+            "placeholder": "{ACHIEVEMENTS_QUERY}",
+            "description": "A placeholder for the GraphQL query to fetch user achievements, replace with the actual query used in the GraphQL API."
+        },
+        {
+            "placeholder": "{GAMES_QUERY}",
+            "description": "A placeholder for the GraphQL query to retrieve game data, replace with the specific query for fetching games."
+        },
+        {
+            "placeholder": "{FRIENDS_ACTIVITY_QUERY}",
+            "description": "A placeholder for the GraphQL query to get friends' activity data, replace with the corresponding query from the API."
+        },
+        {
+            "placeholder": "{OUTPUT_PATH}",
+            "description": "A placeholder for the path where output files are saved, such as the path for saving screenshots or generated files."
+        }
+    ],
+    "tone": "Creative, enthusiastic, technical, and user-experience-focused. Aim for an engaging, informative, and visionary narrative."
+}
