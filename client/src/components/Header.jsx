@@ -1,19 +1,21 @@
-import { NavLink } from "react-router-dom"
+// src/components/Header.jsx
 
-function Header() {
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+const Header = () => {
   return (
-    <header className="bg-red-900 text-white flex justify-between">
-      <h1 className="text-5xl m-3 p-2">ArcadeDex</h1>
-
-      <section className="text-2xl">
-        <NavLink to="/auth">
-          <h4>Login</h4>
-        </NavLink>
-
-        <h4>Search</h4>
-      </section>
+    <header className="bg-indigo-600 text-white p-4 shadow-md">
+      <div className="container mx-auto flex justify-between items-center">
+        <h1 className="text-2xl font-bold">ArcadeDex</h1>
+        <nav className="flex space-x-4">
+          <Link to="/" className="hover:text-gray-200">Home</Link>
+          <Link to="/profile" className="hover:text-gray-200">Profile</Link>
+          <Link to="/settings" className="hover:text-gray-200">Settings</Link>
+        </nav>
+      </div>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;

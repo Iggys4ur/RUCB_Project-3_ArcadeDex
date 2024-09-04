@@ -21,6 +21,7 @@
     "express-session": "^1.18.0",
     "graphql": "^16.9.0",
     "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.8.0",
     "mongoose": "^8.6.0",
     "passport": "^0.7.0",
     "passport-steam": "^1.0.18"

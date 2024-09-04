@@ -1,12 +1,43 @@
-import { gql } from "@apollo/client";
+// src/graphql/queries.js
 
-export const GET_USER = gql`
-  query GetUser {
-    getUser {
-      user {
-        username
-        email
-      }
+import { gql } from '@apollo/client';
+
+export const USER_DATA_QUERY = gql`
+  query getUserData {
+    user {
+      id
+      name
+      email
     }
   }
-`
+`;
+
+export const ACHIEVEMENTS_QUERY = gql`
+  query getAchievements {
+    achievements {
+      id
+      title
+      description
+    }
+  }
+`;
+
+export const GAMES_QUERY = gql`
+  query getGames {
+    games {
+      id
+      name
+      genre
+    }
+  }
+`;
+
+export const FRIENDS_ACTIVITY_QUERY = gql`
+  query getFriendsActivity {
+    friendActivities {
+      id
+      description
+      timestamp
+    }
+  }
+`;

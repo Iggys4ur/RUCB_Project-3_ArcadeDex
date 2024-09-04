@@ -27,7 +27,7 @@ const PORT = process.env.PORT || 3001;
 const dbURL = process.env.MONGO_URL || 'mongodb://127.0.0.1:27017/ArcadeDex';
 
 app.use(session({
-  secret: process.env.SESSION_SECRET,
+  secret: process.env.SESSION_SECRET || 'secret',
   resave: false,
   saveUninitialized: true,
   store: MongoStore.create({
