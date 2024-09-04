@@ -3,7 +3,7 @@ import axios from "axios"
 
 import Header from "./components/Header"
 
-import HomePage from "./pages/HomePage"
+import home from "./pages/home"
 import AuthForm from "./pages/AuthForm"
 import UserPage from "./pages/UserPage"
 import { useStore } from "./store"
@@ -29,7 +29,7 @@ function App() {
       <Header />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<home />} />
         <Route path="/auth" element={(
           <Protect requireAuth={false}>
             <AuthForm />
